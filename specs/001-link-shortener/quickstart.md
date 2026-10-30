@@ -41,8 +41,15 @@ O banco `links.db` é criado e migrado na inicialização. Nos exemplos abaixo, 
 
 ### Interface de testes (Scalar)
 
-Em `Development` (o padrão do `dotnet run`), o navegador abre em `/scalar`, com um formulário
-para cada endpoint. O documento OpenAPI fica em `/openapi/v1.json` (research.md D12). Para
+Em `Development`, a API serve uma interface com um formulário para cada endpoint em `/scalar`,
+e o documento OpenAPI em `/openapi/v1.json` (research.md D12). Para abrir o navegador direto
+na interface:
+
+- **VS Code**: F5, na configuração "Encurtador.Api (Scalar)" (`.vscode/launch.json`);
+- **terminal**: `dotnet watch --project src/Encurtador.Api`.
+
+O `dotnet run` não abre o navegador (ele ignora `launchBrowser`): acesse
+`http://localhost:5289/scalar` à mão. Para
 consultar os acessos pela interface, preencha o cabeçalho `X-Management-Key` com a
 `managementKey` devolvida na criação. Em outros ambientes essas rotas não existem.
 

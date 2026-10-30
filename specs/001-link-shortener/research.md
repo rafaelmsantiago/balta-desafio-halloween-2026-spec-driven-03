@@ -353,7 +353,9 @@ público. A configuração resolve isso sem `ForwardedHeaders` nesta versão.
 
 **Decisão**: em `Development`, a API publica o documento OpenAPI em `/openapi/v1.json`
 (`Microsoft.AspNetCore.OpenApi`) e uma interface de testes em `/scalar`
-(`Scalar.AspNetCore`). O `dotnet run` abre o navegador direto nela (`launchUrl`). Os
+(`Scalar.AspNetCore`). O F5 do VS Code (`.vscode/launch.json`, via `serverReadyAction`) e o
+`dotnet watch` (`launchUrl` do `launchSettings.json`) abrem o navegador direto nela; o
+`dotnet run` ignora `launchBrowser`, e aí basta abrir `/scalar` à mão. Os
 endpoints declaram resumo, descrição e respostas possíveis (`Produces`, `ProducesProblem`,
 `ProducesValidationProblem`), porque devolvem `IResult` e, sem isso, o documento não
 teria tipos de resposta. `scalar` entra na lista de códigos reservados (D9).
