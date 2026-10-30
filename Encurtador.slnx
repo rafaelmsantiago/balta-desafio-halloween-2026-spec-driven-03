@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Encurtador.Api/Encurtador.Api.csproj" />
+    <Project Path="src/Encurtador.Application/Encurtador.Application.csproj" />
+    <Project Path="src/Encurtador.Infrastructure/Encurtador.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Encurtador.IntegrationTests/Encurtador.IntegrationTests.csproj" />
+    <Project Path="tests/Encurtador.UnitTests/Encurtador.UnitTests.csproj" />
+  </Folder>
+</Solution>
