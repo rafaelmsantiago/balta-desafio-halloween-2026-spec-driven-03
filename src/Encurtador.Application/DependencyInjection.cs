@@ -1,0 +1,17 @@
+using Encurtador.Application.Links;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+
+namespace Encurtador.Application;
+
+public static class DependencyInjection
+{
+    public static IServiceCollection AddApplication(this IServiceCollection services)
+    {
+        services.TryAddSingleton(TimeProvider.System);
+        services.AddSingleton<ShortCodeGenerator>();
+        services.AddSingleton<CreateLinkValidator>();
+        services.AddScoped<LinkService>();
+        return services;
+    }
+}
